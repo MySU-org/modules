@@ -1,0 +1,30 @@
+{
+  "moduleId": "bindhosts",
+  "moduleName": "bindhosts",
+  "readme": "# bindhosts for MySU\n\nSystemless hosts for MySU with full Material WebUI and action button control.\n\n### Features\n- Native MySU JS Bridge integration powered by `@mysu-org/mysu`\n- Adaway coexistence & systemless hosts via bind mount, OverlayFS, and manager mount\n- Full WebUI control panel with real-time host query and blacklist/whitelist manager\n\n### Upstream Project\nMaintained upstream by [bindhosts](https://github.com/bindhosts/bindhosts). Ported natively to MySU by [kelexine](https://github.com/kelexine).",
+  "readmeHTML": "<h1>bindhosts for MySU</h1><p>Systemless hosts for MySU with full Material WebUI and action button control.</p><h3>Features</h3><ul><li>Native MySU JS Bridge integration powered by <code>@mysu-org/mysu</code></li><li>Adaway coexistence &amp; systemless hosts via bind mount, OverlayFS, and manager mount</li><li>Full WebUI control panel with real-time host query and blacklist/whitelist manager</li></ul><h3>Credits</h3><p>Maintained upstream by <a href=\"https://github.com/bindhosts/bindhosts\">bindhosts</a>. Ported natively to MySU by <a href=\"https://github.com/kelexine\">kelexine</a>.</p>",
+  "homepageUrl": "https://github.com/MySU-org/bindhosts",
+  "sourceUrl": "https://github.com/MySU-org/bindhosts",
+  "url": "https://github.com/MySU-org/bindhosts",
+  "latestRelease": {
+    "version": "v2.1.5-mysu",
+    "time": "2026-09-14T21:47:00Z",
+    "downloadUrl": "https://github.com/MySU-org/modules/releases/download/bindhosts-v2.1.5-mysu/bindhosts-v2.1.5-mysu.zip"
+  },
+  "releases": [
+    {
+      "name": "bindhosts v2.1.5-mysu",
+      "tagName": "bindhosts-v2.1.5-mysu",
+      "publishedAt": "2026-09-14T21:47:00Z",
+      "descriptionHTML": "<h3>bindhosts v2.1.5 for MySU</h3><p>First official release natively ported from source for MySU.</p><ul><li>Replaced legacy kernelsu-alt with native <code>@mysu-org/mysu@3.0.2</code></li><li>Vite Material WebUI built and optimized for MySU Manager</li><li>Prepends <code>/data/adb/mysu/bin</code> for seamless path resolution</li><li>Supports <code>dev.kelexine.mysu</code> WebUI directly</li></ul>",
+      "releaseAssets": [
+        {
+          "name": "bindhosts-v2.1.5-mysu.zip",
+          "downloadUrl": "https://github.com/MySU-org/modules/releases/download/bindhosts-v2.1.5-mysu/bindhosts-v2.1.5-mysu.zip",
+          "size": 257024,
+          "downloadCount": 1
+        }
+      ]
+    }
+  ]
+}

@@ -23,5 +23,34 @@
       "time": "2026-09-14T20:30:00Z",
       "downloadUrl": "https://github.com/MySU-org/modules/releases/download/encore-v5.2.1-mysu/encore-v5.2.1-mysu.zip"
     }
+  },
+  {
+    "moduleId": "bindhosts",
+    "moduleName": "bindhosts",
+    "authors": [
+      {
+        "name": "xx",
+        "link": "https://github.com/xx"
+      },
+      {
+        "name": "KOWX712",
+        "link": "https://github.com/KOWX712"
+      },
+      {
+        "name": "kelexine",
+        "link": "https://github.com/kelexine"
+      }
+    ],
+    "summary": "Systemless hosts for MySU with WebUI",
+    "metamodule": false,
+    "stargazerCount": 1,
+    "updatedAt": "2026-09-14T21:47:44Z",
+    "createdAt": "2026-09-14T21:47:44Z",
+    "latestRelease": {
+      "version": "v2.1.5-mysu",
+      "versionCode": 215,
+      "time": "2026-09-14T21:47:44Z",
+      "downloadUrl": "https://github.com/MySU-org/modules/releases/download/bindhosts-v2.1.5-mysu/bindhosts-v2.1.5-mysu.zip"
+    }
   }
 ]
