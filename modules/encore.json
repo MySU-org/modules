@@ -3,9 +3,9 @@
   "moduleName": "Encore Tweaks",
   "readme": "# Encore Tweaks for MySU\n\nUniversal Android Performance, Battery & Thermal Tweaks ported natively for MySU.\n\n### Features\n- Native MySU JS Bridge integration powered by `@mysu-org/mysu`\n- Pure `window.mysu` WebUI execution\n- Embedded NDK r29 native `encored` daemon\n- Dynamic per-app game profiling and inotify event monitoring\n\n### Upstream Project\nMaintained upstream by [Rem01Gaming](https://github.com/Rem01Gaming/encore). Ported natively to MySU by [kelexine](https://github.com/kelexine).",
   "readmeHTML": "<h1>Encore Tweaks for MySU</h1><p>Universal Android Performance, Battery &amp; Thermal Tweaks ported natively for MySU without legacy dependencies.</p><h3>Features</h3><ul><li>Native MySU JS Bridge integration powered by <code>@mysu-org/mysu</code></li><li>Pure <code>window.mysu</code> and WebUI execution</li><li>Embedded NDK r29 native <code>encored</code> daemon</li><li>Dynamic per-app game profiling and inotify event monitoring</li></ul><h3>Credits</h3><p>Maintained upstream by <a href=\"https://github.com/Rem01Gaming/encore\">Rem01Gaming</a>. Ported natively to MySU by <a href=\"https://github.com/kelexine\">kelexine</a>.</p>",
-  "homepageUrl": "https://github.com/MySU-org/modules",
-  "sourceUrl": "https://github.com/Rem01Gaming/encore",
-  "url": "https://github.com/MySU-org/modules",
+  "homepageUrl": "https://github.com/MySU-org/encore",
+  "sourceUrl": "https://github.com/MySU-org/encore",
+  "url": "https://github.com/MySU-org/encore",
   "latestRelease": {
     "version": "v5.2.1-mysu",
     "time": "2026-09-14T20:30:00Z",
