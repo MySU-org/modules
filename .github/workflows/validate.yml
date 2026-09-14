@@ -1,0 +1,60 @@
+name: Validate Module Index
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate Module Catalog JSON
+        run: |
+          python3 - << 'EOF'
+          import json
+          import sys
+          from pathlib import Path
+
+          root = Path(".")
+          catalog_path = root / "modules.json"
+          if not catalog_path.exists():
+              print("ERROR: modules.json does not exist!", file=sys.stderr)
+              sys.exit(1)
+
+          with open(catalog_path, "r", encoding="utf-8") as f:
+              modules = json.load(f)
+
+          if not isinstance(modules, list):
+              print("ERROR: modules.json must be a JSON array!", file=sys.stderr)
+              sys.exit(1)
+
+          required_fields = ["moduleId", "moduleName", "authors", "summary", "latestRelease"]
+          for m in modules:
+              for f in required_fields:
+                  if f not in m:
+                      print(f"ERROR: Module missing required field '{f}': {m}", file=sys.stderr)
+                      sys.exit(1)
+              lr = m["latestRelease"]
+              for lrf in ["downloadUrl", "version", "versionCode"]:
+                  if lrf not in lr:
+                      print(f"ERROR: latestRelease missing '{lrf}' in module {m.get('moduleId')}", file=sys.stderr)
+                      sys.exit(1)
+
+              detail_path = root / "modules" / f"{m['moduleId']}.json"
+              if detail_path.exists():
+                  with open(detail_path, "r", encoding="utf-8") as df:
+                      detail = json.load(df)
+                      print(f"Validated detail manifest: {detail_path.name}")
+
+          print(f"Successfully validated {len(modules)} module(s) in catalog.")
+          EOF

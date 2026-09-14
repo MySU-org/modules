@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "moduleId": "encore",
+    "moduleName": "Encore Tweaks",
+    "authors": [
+      {
+        "name": "Rem01Gaming",
+        "link": "https://github.com/Rem01Gaming"
+      },
+      {
+        "name": "kelexine",
+        "link": "https://github.com/kelexine"
+      }
+    ],
+    "summary": "Universal Android Performance, Battery & Thermal Tweaks ported natively for MySU",
+    "metamodule": false,
+    "stargazerCount": 1,
+    "updatedAt": "2026-09-14T20:30:00Z",
+    "createdAt": "2026-09-14T20:30:00Z",
+    "latestRelease": {
+      "version": "v5.2.1-mysu",
+      "versionCode": 1552,
+      "time": "2026-09-14T20:30:00Z",
+      "downloadUrl": "https://github.com/MySU-org/modules/releases/download/encore-v5.2.1-mysu/encore-v5.2.1-mysu.zip"
+    }
+  }
+]
