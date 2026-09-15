@@ -52,5 +52,30 @@
       "time": "2026-09-14T21:47:44Z",
       "downloadUrl": "https://github.com/MySU-org/modules/releases/download/bindhosts-v2.1.5-mysu/bindhosts-v2.1.5-mysu.zip"
     }
+  },
+  {
+    "moduleId": "tricky-addon",
+    "moduleName": "Tricky Addon",
+    "authors": [
+      {
+        "name": "KOWX712",
+        "link": "https://github.com/KOWX712"
+      },
+      {
+        "name": "kelexine",
+        "link": "https://github.com/kelexine"
+      }
+    ],
+    "summary": "Configure Tricky Store target.txt with WebUI",
+    "metamodule": false,
+    "stargazerCount": 1,
+    "updatedAt": "2026-09-15T08:41:00Z",
+    "createdAt": "2026-09-15T08:41:00Z",
+    "latestRelease": {
+      "version": "v5.0-beta.4",
+      "versionCode": 729,
+      "time": "2026-09-15T08:41:00Z",
+      "downloadUrl": "https://github.com/MySU-org/modules/releases/download/tricky-addon-v5.0-mysu/tricky-addon-v5.0-mysu.zip"
+    }
   }
 ]

@@ -1,0 +1,30 @@
+{
+  "moduleId": "tricky-addon",
+  "moduleName": "Tricky Addon",
+  "readme": "# Tricky Addon for MySU\n\nA WebUI to configure Tricky Store target.txt, OhMyKeymint, and TEESim target lists natively for MySU.\n\n### Features\n- Native MySU JS Bridge integration powered by `@mysu-org/mysu`\n- Manage and update Tricky Store `target.txt` directly from MySU Manager WebUI\n- Modern Material 3 UI with dark mode, live search, app icons, and batch selection\n- Supports both legacy mode and Keybox extraction\n\n### Upstream Project\nMaintained upstream by [KOWX712](https://github.com/KOWX712/Tricky-Addon-Update-Target-List). Ported natively to MySU by [kelexine](https://github.com/kelexine).",
+  "readmeHTML": "<h1>Tricky Addon for MySU</h1><p>A WebUI to configure Tricky Store target.txt, OhMyKeymint, and TEESim target lists natively for MySU.</p><h3>Features</h3><ul><li>Native MySU JS Bridge integration powered by <code>@mysu-org/mysu</code></li><li>Manage and update Tricky Store <code>target.txt</code> directly from MySU Manager WebUI</li><li>Modern Material 3 UI with dark mode, live search, app icons, and batch selection</li><li>Supports both legacy mode and Keybox extraction</li></ul><h3>Credits</h3><p>Maintained upstream by <a href=\"https://github.com/KOWX712/Tricky-Addon-Update-Target-List\">KOWX712</a>. Ported natively to MySU by <a href=\"https://github.com/kelexine\">kelexine</a>.</p>",
+  "homepageUrl": "https://github.com/MySU-org/tricky-addon",
+  "sourceUrl": "https://github.com/MySU-org/tricky-addon",
+  "url": "https://github.com/MySU-org/tricky-addon",
+  "latestRelease": {
+    "version": "v5.0-beta.4",
+    "time": "2026-09-15T08:41:00Z",
+    "downloadUrl": "https://github.com/MySU-org/modules/releases/download/tricky-addon-v5.0-mysu/tricky-addon-v5.0-mysu.zip"
+  },
+  "releases": [
+    {
+      "name": "Tricky Addon v5.0-mysu",
+      "tagName": "tricky-addon-v5.0-mysu",
+      "publishedAt": "2026-09-15T08:41:00Z",
+      "descriptionHTML": "<h3>Tricky Addon v5.0 for MySU</h3><p>First official release natively ported from source for MySU.</p><ul><li>Replaced legacy kernelsu-alt with native <code>@mysu-org/mysu@3.0.2</code></li><li>Built with Material 3 WebUI tailored for MySU WebUI bridge</li><li>Added <code>module.prop</code> self-healing to maintain manager discovery</li><li>Supports <code>dev.kelexine.mysu</code> WebUI directly</li></ul>",
+      "releaseAssets": [
+        {
+          "name": "tricky-addon-v5.0-mysu.zip",
+          "downloadUrl": "https://github.com/MySU-org/modules/releases/download/tricky-addon-v5.0-mysu/tricky-addon-v5.0-mysu.zip",
+          "size": 1124336,
+          "downloadCount": 1
+        }
+      ]
+    }
+  ]
+}
