@@ -79,24 +79,28 @@
     }
   },
   {
-    "moduleId": "meta-overlayfs",
-    "moduleName": "MyOverlayFs",
+    "moduleId": "meta-myoverlayfs",
+    "moduleName": "MyOverlayFS Stealth",
     "authors": [
       {
         "name": "kelexine",
         "link": "https://github.com/kelexine"
+      },
+      {
+        "name": "AshBorn & KernelSU Devs",
+        "link": "https://github.com/AshBorn & KernelSU Devs"
       }
     ],
-    "summary": "Next-Gen OverlayFS engine with Ring-0 MYSUFS stealth integration, real-time kernel inspector & native WebUI",
+    "summary": "Next-Gen OverlayFS engine with Ring-0 MYSUFS stealth integration, real-time kernel inspector & native WebUI.",
     "metamodule": true,
     "stargazerCount": 1,
-    "updatedAt": "2026-10-20T10:18:31Z",
-    "createdAt": "2026-09-17T14:36:15Z",
+    "updatedAt": "2026-10-20T11:54:44Z",
+    "createdAt": "2026-10-20T11:47:13Z",
     "latestRelease": {
-      "version": "v1.4.0-mysu",
+      "version": "v1.4.0",
       "versionCode": 14000,
-      "time": "2026-10-20T10:18:31Z",
-      "downloadUrl": "https://github.com/MySU-org/modules/releases/download/meta-overlayfs-v1.4.0-mysu/meta-overlayfs-v1.4.0-mysu.zip"
+      "time": "2026-10-20T11:54:44Z",
+      "downloadUrl": "https://github.com/MySU-org/modules/releases/download/meta-myoverlayfs-v1.4.0/meta-myoverlayfs-v1.4.0.zip"
     }
   }
 ]
