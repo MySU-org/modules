@@ -1,0 +1,94 @@
+name: Build and Register Module
+
+on:
+  workflow_dispatch:
+    inputs:
+      module_repo:
+        description: "GitHub Repository (owner/repo or HTTPS URL)"
+        required: true
+        type: string
+      ref:
+        description: "Git Branch, Tag, or Commit"
+        required: false
+        default: "main"
+        type: string
+      build_command:
+        description: "Custom build command (or 'auto')"
+        required: false
+        default: "auto"
+        type: string
+      is_metamodule:
+        description: "Mark as Metamodule"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-register:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out modules catalog
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Set up Rust
+        run: |
+          rustup update stable
+          rustup target add aarch64-linux-android
+          rustup target add x86_64-linux-android
+          cargo install cargo-ndk || true
+
+      - name: Clone Module Repository
+        run: |
+          mkdir -p workspace
+          REPO_URL="${{ inputs.module_repo }}"
+          if [[ ! "$REPO_URL" =~ ^https?:// ]]; then
+            REPO_URL="https://github.com/${REPO_URL}.git"
+          fi
+          git clone --depth 1 --branch "${{ inputs.ref }}" "$REPO_URL" workspace/module_src
+
+      - name: Build Module
+        run: |
+          cd workspace/module_src
+          BUILD_CMD="${{ inputs.build_command }}"
+          if [ "$BUILD_CMD" != "auto" ] && [ -n "$BUILD_CMD" ]; then
+            eval "$BUILD_CMD"
+          elif [ -f "./build.sh" ]; then
+            chmod +x ./build.sh
+            ./build.sh
+          fi
+
+      - name: Register and Publish Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          EXTRA_ARGS=""
+          if [ "${{ inputs.is_metamodule }}" = "true" ]; then
+            EXTRA_ARGS="--metamodule"
+          fi
+          python3 scripts/add_module.py --path workspace/module_src $EXTRA_ARGS
+
+      - name: Push Catalog Changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet origin/main; then
+            echo "No changes to push."
+          else
+            git push origin main
+          fi
