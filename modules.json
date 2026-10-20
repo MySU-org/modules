@@ -77,5 +77,26 @@
       "time": "2026-09-15T08:41:00Z",
       "downloadUrl": "https://github.com/MySU-org/modules/releases/download/tricky-addon-v5.0-mysu/tricky-addon-v5.0-mysu.zip"
     }
+  },
+  {
+    "moduleId": "meta-overlayfs",
+    "moduleName": "MyOverlayFs",
+    "authors": [
+      {
+        "name": "kelexine",
+        "link": "https://github.com/kelexine"
+      }
+    ],
+    "summary": "Next-Gen OverlayFS engine with Ring-0 MYSUFS stealth integration, real-time kernel inspector & native WebUI",
+    "metamodule": true,
+    "stargazerCount": 1,
+    "updatedAt": "2026-10-20T10:18:31Z",
+    "createdAt": "2026-09-17T14:36:15Z",
+    "latestRelease": {
+      "version": "v1.4.0-mysu",
+      "versionCode": 14000,
+      "time": "2026-10-20T10:18:31Z",
+      "downloadUrl": "https://github.com/MySU-org/modules/releases/download/meta-overlayfs-v1.4.0-mysu/meta-overlayfs-v1.4.0-mysu.zip"
+    }
   }
 ]
